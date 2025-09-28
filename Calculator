@@ -1,0 +1,85 @@
+import math
+
+def add(x, y):
+    return x + y
+
+def subtract(x, y):
+    return x - y
+
+def multiply(x, y):
+    return x * y
+
+def divide(x, y):
+    if y == 0:
+        return "Division by zero error"
+    return x / y
+
+def power(x, y):
+    return math.pow(x, y)
+
+def square_root(x):
+    if x < 0:
+        return "Square root of negative error"
+    return math.sqrt(x)
+
+def sine(x):
+    return math.sin(math.radians(x))  # Input in degrees
+
+def cosine(x):
+    return math.cos(math.radians(x))
+
+def tangent(x):
+    return math.tan(math.radians(x))
+
+while True:
+    print("\nAdvanced Calculator")
+    print("1. Addition")
+    print("2. Subtraction")
+    print("3. Multiplication")
+    print("4. Division")
+    print("5. Power (x^y)")
+    print("6. Square Root")
+    print("7. Sine")
+    print("8. Cosine")
+    print("9. Tangent")
+    print("10. Exit")
+
+    choice = input("Enter your choice (1-10): ")
+
+    if choice == '1':
+        x = float(input("Enter first number: "))
+        y = float(input("Enter second number: "))
+        print("Result:", add(x, y))
+    elif choice == '2':
+        x = float(input("Enter first number: "))
+        y = float(input("Enter second number: "))
+        print("Result:", subtract(x, y))
+    elif choice == '3':
+        x = float(input("Enter first number: "))
+        y = float(input("Enter second number: "))
+        print("Result:", multiply(x, y))
+    elif choice == '4':
+        x = float(input("Enter first number: "))
+        y = float(input("Enter second number: "))
+        print("Result:", divide(x, y))
+    elif choice == '5':
+        x = float(input("Enter base: "))
+        y = float(input("Enter exponent: "))
+        print("Result:", power(x, y))
+    elif choice == '6':
+        x = float(input("Enter number: "))
+        print("Result:", square_root(x))
+    elif choice == '7':
+        x = float(input("Enter angle in degrees: "))
+        print("Result:", sine(x))
+    elif choice == '8':
+        x = float(input("Enter angle in degrees: "))
+        print("Result:", cosine(x))
+    elif choice == '9':
+        x = float(input("Enter angle in degrees: "))
+        print("Result:", tangent(x))
+    elif choice == '10':
+        print("Exiting Calculator...")
+        break
+    else:
+        print("Invalid input. Try again.")
